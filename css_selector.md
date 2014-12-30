@@ -12,7 +12,6 @@ CSS Selectors:
  border: 1px solid black;
 }
 ```
-===============
 2. \#X - id selector
 ```css
 #container {
