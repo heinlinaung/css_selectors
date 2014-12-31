@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Css selectors by heinlinaung</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Css selectors</h1>
+          <h2>Wiki about CSS selectors(On going)</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/heinlinaung/css_selectors/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/heinlinaung/css_selectors/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/heinlinaung/css_selectors" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h2>
+<a id="css-selectors" class="anchor" href="#css-selectors" aria-hidden="true"><span class="octicon octicon-link"></span></a>CSS Selectors:</h2>
+
+<ul>
+<li>Ref : <a href="http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048">Nettus+</a>
+</li>
+</ul>
+
+<p>1.[ * - select all ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">*</span> {
+ <span class="pl-mp"><span class="pl-s3">margin</span></span>: <span class="pl-c1">0</span>;
+ <span class="pl-mp"><span class="pl-s3">padding</span></span>: <span class="pl-c1">0</span>;
+}</pre></div>
+
+<div class="highlight highlight-css"><pre><span class="pl-e">#container</span> <span class="pl-ent">*</span> {
+ <span class="pl-mp"><span class="pl-s3">border</span></span>: <span class="pl-c1">1<span class="pl-k">px</span></span> <span class="pl-sc">solid</span> <span class="pl-sc">black</span>;
+}</pre></div>
+
+<p>2.[ #X - id selector ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-e">#container</span> {
+   <span class="pl-mp"><span class="pl-s3">width</span></span>: <span class="pl-c1">960<span class="pl-k">px</span></span>;
+   <span class="pl-mp"><span class="pl-s3">margin</span></span>: <span class="pl-sc">auto</span>;
+}</pre></div>
+
+<p>3.[ .X - class selector ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-e">.error</span> {
+  <span class="pl-mp"><span class="pl-s3">color</span></span>: <span class="pl-sc">red</span>;
+}</pre></div>
+
+<p>4.[ X Y - descendant selector ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">li</span> <span class="pl-ent">a</span> {
+  <span class="pl-mp"><span class="pl-s3">text-decoration</span></span>: <span class="pl-sc">none</span>;
+}</pre></div>
+
+<p>5.[ X - all specific elements ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">a</span> { <span class="pl-mp"><span class="pl-s3">color</span></span>: <span class="pl-sc">red</span>; }
+<span class="pl-ent">ul</span> { <span class="pl-mp"><span class="pl-s3">margin-left</span></span>: <span class="pl-c1">0</span>; }</pre></div>
+
+<p>6.[ X:visited and X:link - pseudo class ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">a</span><span class="pl-e">:link</span> { <span class="pl-mp"><span class="pl-s3">color</span></span>: <span class="pl-sc">red</span>; } <span class="pl-c">/*all anchor tags which have yet to be clicked on*/</span>
+<span class="pl-ent">a</span>:visted { <span class="pl-mp"><span class="pl-s3">color</span></span>: <span class="pl-sc">purple</span>; } <span class="pl-c">/*all anchor tags which have visited/clicked on*/</span></pre></div>
+
+<p>7.[ X + Y - an adjacent selector ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">ul</span> + <span class="pl-ent">p</span> {
+   <span class="pl-mp"><span class="pl-s3">color</span></span>: <span class="pl-sc">red</span>;
+}</pre></div>
+
+<p>8.[ X &gt; Y - direct children selector ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">div</span><span class="pl-e">#container</span> &gt; <span class="pl-ent">ul</span> {
+  <span class="pl-mp"><span class="pl-s3">border</span></span>: <span class="pl-c1">1<span class="pl-k">px</span></span> <span class="pl-sc">solid</span> <span class="pl-sc">black</span>;
+}</pre></div>
+
+<p>9.[ X ~ Y - sibling combinator ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">ul</span> ~ <span class="pl-ent">p</span> {
+   <span class="pl-mp"><span class="pl-s3">color</span></span>: <span class="pl-sc">red</span>;
+}</pre></div>
+
+<p>10.[ X[title] - attribute(s) selector ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">a</span>[<span class="pl-ent">title</span>] {
+   <span class="pl-mp"><span class="pl-s3">color</span></span>: <span class="pl-sc">green</span>;
+}s</pre></div>
+
+<p>11.[ X[href="foo"] ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">a</span>[href="http://net<span class="pl-e">.tutsplus.com</span>"] {
+  <span class="pl-mp"><span class="pl-s3">color</span></span>: <span class="pl-c1">#1f6053</span>; <span class="pl-c">/* nettuts green */</span>
+}</pre></div>
+
+<p>12.[ X[href*="nettus"] ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">a</span>[href<span class="pl-ent">*</span>="tus"] {
+    <span class="pl-mp"><span class="pl-s3">color</span></span>:<span class="pl-c1">#fff</span>; <span class="pl-c">/*make it white*/</span>
+}</pre></div>
+
+<p>13.[ X[href^="http"] ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">a</span>[href^="http"] {
+   <span class="pl-mp"><span class="pl-s3">background</span></span>: <span class="pl-s3">url</span>(<span class="pl-v">path/to/external/icon.png</span>) <span class="pl-sc">no-repeat</span>;
+   <span class="pl-mp"><span class="pl-s3">padding-left</span></span>: <span class="pl-c1">10<span class="pl-k">px</span></span>;
+}</pre></div>
+
+<p>14.[ X[href$=".jpg"] ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">a</span>[href$="<span class="pl-e">.jpg</span>"] {
+    <span class="pl-mp"><span class="pl-s3">color</span></span>:<span class="pl-sc">red</span>;
+}</pre></div>
+
+<p>15.[ X[data-*="foo"] ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">a</span>[data-filetype="image"] {
+    <span class="pl-mp"><span class="pl-s3">color</span></span>:<span class="pl-id">pink</span>;
+}</pre></div>
+
+<p>Tips - </p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">a</span>[href$="<span class="pl-e">.jpg</span>"],
+<span class="pl-ent">a</span>[href$="<span class="pl-e">.jpeg</span>"],
+<span class="pl-ent">a</span>[href$="<span class="pl-e">.png</span>"],
+<span class="pl-ent">a</span>[href$="<span class="pl-e">.gif</span>"] {
+   <span class="pl-mp"><span class="pl-s3">color</span></span>: <span class="pl-sc">red</span>;
+}</pre></div>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s1"><span class="pl-pds">"</span>path/to/image.jpg<span class="pl-pds">"</span></span> <span class="pl-e">data-filetype</span>=<span class="pl-s1"><span class="pl-pds">"</span>image<span class="pl-pds">"</span></span>&gt; Image Link &lt;/<span class="pl-ent">a</span>&gt;</pre></div>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">a</span>[data-filetype="image"] {
+    <span class="pl-mp"><span class="pl-s3">color</span></span>:<span class="pl-id">pink</span>;
+}</pre></div>
+
+<p>16.[ X[foo~="bar"] ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">a</span>[data-info~="image"] {
+    <span class="pl-mp"><span class="pl-s3">border</span></span>:<span class="pl-c1">1<span class="pl-k">px</span></span> <span class="pl-sc">solid</span> <span class="pl-sc">red</span>;
+}</pre></div>
+
+<p>17.[ X:checked ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">input</span>[type=radio]<span class="pl-e">:checked</span>{
+    <span class="pl-mp"><span class="pl-s3">border</span></span>:<span class="pl-c1">1<span class="pl-k">px</span></span> <span class="pl-sc">solid</span> <span class="pl-sc">red</span>;
+}</pre></div>
+
+<p>18.[ X:after ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-e">.clearfix</span><span class="pl-e">:after</span> {
+    <span class="pl-mp"><span class="pl-s3">content</span></span>: <span class="pl-s1"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>;
+    <span class="pl-mp"><span class="pl-s3">display</span></span>: <span class="pl-sc">block</span>;
+    <span class="pl-mp"><span class="pl-s3">clear</span></span>: <span class="pl-sc">both</span>;
+    <span class="pl-mp"><span class="pl-s3">visibility</span></span>: <span class="pl-sc">hidden</span>;
+    <span class="pl-mp"><span class="pl-s3">font-size</span></span>: <span class="pl-c1">0</span>;
+    <span class="pl-mp"><span class="pl-s3">height</span></span>: <span class="pl-c1">0</span>;
+    }
+<span class="pl-e">.clearfix</span> { 
+   *<span class="pl-mp"><span class="pl-s3">display</span></span>: <span class="pl-sc">inline-block</span>; 
+   _<span class="pl-mp">height</span>: <span class="pl-c1">1<span class="pl-k">%</span></span>;
+}</pre></div>
+
+<p>19.[ X:hover ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">a</span><span class="pl-e">:hover</span>{
+    <span class="pl-mp">backgrond</span>:<span class="pl-c1">#e3e3e3</span>;
+}</pre></div>
+
+<p>20.[ X:not(selector) ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">div</span><span class="pl-e">:not</span>(<span class="pl-e">#container</span>){
+    <span class="pl-mp"><span class="pl-s3">color</span></span>:<span class="pl-sc">blue</span>;
+}
+<span class="pl-ent">*</span><span class="pl-e">:not</span>(<span class="pl-ent">p</span>) {
+    <span class="pl-mp"><span class="pl-s3">color</span></span>:<span class="pl-sc">green</span>;
+}</pre></div>
+
+<p>21.[ X::pseduoElement ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">p</span><span class="pl-e">::first-line</span>{
+    <span class="pl-mp"><span class="pl-s3">font-weight</span></span>:<span class="pl-sc">bold</span>;
+}</pre></div>
+
+<p>22.[ X:nth-child(n) ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">li</span><span class="pl-e">:nth-child</span>(<span class="pl-c1">3</span>){
+    <span class="pl-mp"><span class="pl-s3">color</span></span>:<span class="pl-sc">red</span>; <span class="pl-c">/*li:nth-child(4n) target every fourth list item*/</span>
+}</pre></div>
+
+<p>23.[ X:nth-last-child(n) ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">li</span><span class="pl-e">:nth-last-child</span>(<span class="pl-c1">2</span>){
+    <span class="pl-mp"><span class="pl-s3">color</span></span>:<span class="pl-sc">red</span>;
+}</pre></div>
+
+<p>24.[ X:nth-of-type(n) ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">ul</span><span class="pl-e">:nth-of-type</span>(<span class="pl-c1">2</span>){
+    <span class="pl-mp"><span class="pl-s3">border</span></span>:<span class="pl-c1">1<span class="pl-k">px</span></span> <span class="pl-sc">solid</span> <span class="pl-sc">black</span>;
+}</pre></div>
+
+<p>25.[ X:nth-last-of-type(n) ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">ul</span><span class="pl-e">:nth-last-of-type</span>(<span class="pl-c1">2</span>){
+    <span class="pl-mp"><span class="pl-s3">border</span></span>:<span class="pl-c1">1<span class="pl-k">px</span></span> <span class="pl-sc">solid</span> <span class="pl-sc">red</span>;
+}</pre></div>
+
+<p>26.[ X:first-child ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">ul</span> <span class="pl-ent">li</span><span class="pl-e">:first-child</span>{
+    <span class="pl-mp"><span class="pl-s3">border-top</span></span>:<span class="pl-sc">none</span>;
+}</pre></div>
+
+<p>27.[ X:last-child ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">ul</span>&gt;<span class="pl-ent">li</span><span class="pl-e">:last-child</span>{
+    <span class="pl-mp"><span class="pl-s3">border-bottom</span></span>:<span class="pl-sc">none</span>;
+}</pre></div>
+
+<p>28.[ X:only-child ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">div</span> <span class="pl-ent">p</span>:only-child{
+    <span class="pl-mp"><span class="pl-s3">color</span></span>:<span class="pl-sc">green</span>;
+}</pre></div>
+
+<p>29.[ X:only-of-type ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">li</span><span class="pl-e">:only-of-type</span>{
+    <span class="pl-mp"><span class="pl-s3">font-weight</span></span>:<span class="pl-sc">bold</span>;
+}</pre></div>
+
+<p>30.[ X:first-of-type ]</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-ent">ul</span><span class="pl-e">:first-of-type</span>{
+    <span class="pl-mp"><span class="pl-s3">color</span></span>:<span class="pl-sc">red</span>;
+}</pre></div>
+        </section>
+
+        <footer>
+          Css selectors is maintained by <a href="https://github.com/heinlinaung">heinlinaung</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
